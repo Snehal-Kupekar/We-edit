@@ -73,7 +73,7 @@ https://templatemo.com/tm-531-reflux
               </ul>
             </div>
             <div class="copyright-text">
-              <p>Copyright 2019 Reflux Design</p>
+              <p>© 2021 WeEdit</p>
             </div>
           </div>
         </div>
@@ -92,19 +92,17 @@ https://templatemo.com/tm-531-reflux
           <div class="left-image-post">
             <div class="row">
               <div class="col-md-6">
-                <div class="left-image left-image-1">
-                  <img src="assets/images2/photoedit.jpg" alt="" />
+                <div class=" left-image left-image-1">
+                  <img src="assets/images2/videoedit.jpg"  alt="" />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="right-text">
-                  <h4>We Edit Photo</h4>
-                  <p>
-                    Donec tristique feugiat lacus, at sollicitudin nunc euismod
-                    sed. Mauris viverra, erat non sagittis gravida, elit dui
-                    mollis ante, sit amet eleifend purus ligula eget eros. Sed
-                    tincidunt quam vitae neque pharetra dignissim eget ut
-                    libero.
+                  <h4 class="text-monospace font-weight-bold text-warning">IMAGES</h4>
+                  <p class="lead text-monospace">
+                    We create images,banners, many more and we edit them too for free.
+                    Yes you heard it right we do this for free.
+                    You have to just follow us on <a href="">instagram</a> and then DM us.
                   </p>
 
                 </div>
@@ -115,13 +113,11 @@ https://templatemo.com/tm-531-reflux
             <div class="row">
               <div class="col-md-6">
                 <div class="left-text">
-                  <h4>We Edit Video</h4>
-                  <p>
-                    Pellentesque habitant morbi tristique senectus et netus et
-                    malesuada fames ac turpis egestas. Vestibulum fermentum
-                    eleifend nibh, vitae sodales elit finibus pretium.
-                    Suspendisse potenti. Ut sollicitudin risus a sollicitudin
-                    semper.
+                  <h4 class="text-monospace font-weight-bold text-warning">VIDEOS</h4>
+                  <p class="lead text-monospace">
+                    We edit videos such as basic,cinematic,wedding and many more.
+                    We can create the same for your reels,YouTube channel or for your buisness teaser.
+                    Hurry up!! and just to DM us on our <a href="">instagram</a> for further conversation.
                   </p>
                 </div>
               </div>
@@ -141,13 +137,10 @@ https://templatemo.com/tm-531-reflux
               </div>
               <div class="col-md-6">
                 <div class="right-text">
-                  <h4>We Edit Logo</h4>
-                  <p>
-                    Donec tristique feugiat lacus, at sollicitudin nunc euismod
-                    sed. Mauris viverra, erat non sagittis gravida, elit dui
-                    mollis ante, sit amet eleifend purus ligula eget eros. Sed
-                    tincidunt quam vitae neque pharetra dignissim eget ut
-                    libero.
+                  <h4 class="text-monospace font-weight-bold text-warning">LOGO</h4>
+                  <p class="lead text-monospace">
+                    We create and design logos on client's requirement for their websites,buisness,apps etc.
+                    Contact us on <a href="">instagram</a> for further details.
                   </p>
                 </div>
               </div>
@@ -162,10 +155,9 @@ https://templatemo.com/tm-531-reflux
      <!-- Our Work section  -->
       <section class="section my-work" data-section="section2">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading ">
             <h2>Our Work</h2>
-            <div class="line-dec"></div>
-            <span>We edit video , photos and logos as the constumer's requirement.</span>
+            <div class="line-dec "></div>
           </div>
           <div class="row">
             <div class="isotope-wrapper">
@@ -286,7 +278,7 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>About Us</h2>
             <div class="line-dec"></div>
-            <span>We edit video , photos and logos as the constumer's requirement.</span>
+            <span class="lead text-monospace">We all are the Developers,editors of this company.<br class="my-2">So,here we are and what we do?</span>
           </div>
           <div class="row">
             <div class="isotope-wrapper">
@@ -314,7 +306,7 @@ https://templatemo.com/tm-531-reflux
                         ><i class="fa fa-search"></i
                       ></a>
                       <h4>Amar Khamkar</h4>
-                      <span>Web Developer and Photo Editor</span>
+                      <span>Founder and web developer.</span>
                     </figcaption>
                   </figure>
                 </div>
@@ -375,8 +367,8 @@ https://templatemo.com/tm-531-reflux
                     </figcaption>
                   </figure>
                 </div>
-
-                <div class="isotope-item" data-type="nature">
+                
+                <div class="isotope-item " data-type="nature">
                   <figure class="snip1321">
                     <img
                       src="assets/images/portfolio-05.jpg"
@@ -435,7 +427,7 @@ https://templatemo.com/tm-531-reflux
                       <fieldset>
                         <input
                           name="email"
-                          type="text"
+                          type="email"
                           class="form-control"
                           id="email"
                           placeholder="Your email..."
@@ -469,7 +461,7 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">
+                        <button type="submit" onclick="sendMsg();" id="form-submit" class="button">
                           Send Message
                         </button>
                       </fieldset>
@@ -537,6 +529,11 @@ https://templatemo.com/tm-531-reflux
         e.preventDefault();
         showSection($(this).attr("href"), true);
       });
+
+
+      function sendMsg(){
+        alert('Thank you for your message. We will get back to you soon.');
+      }
 
       $(window).scroll(function() {
         checkSection();
