@@ -26,6 +26,7 @@ https://templatemo.com/tm-531-reflux
     <link rel="stylesheet" href="assets/css/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
 
   <body>
@@ -461,7 +462,7 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" onclick="sendMsg();" id="form-submit" class="button">
+                        <button type="submit" id="form-submit" class="button">
                           Send Message
                         </button>
                       </fieldset>
@@ -531,9 +532,28 @@ https://templatemo.com/tm-531-reflux
       });
 
 
-      function sendMsg(){
+      $(document).on('submit','#contact',function(e){
         alert('Thank you for your message. We will get back to you soon.');
-      }
+        //add this data in excel sheet
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+        Email.send({
+        Host: "smtp.gmail.com",
+        Username: "amarkhamkar694@gmail.com",
+        Password: "lyyqhwrlbqznyenp",
+        To: 'weedit2022@gmail.com',
+        From: "amarkhamkar694@gmail.com",
+        Subject: "Hi,you got a message from " + name,
+        Body: "email: " + email + "\n" + "subject: " + subject + "\n" + "message: " + message
+      })
+        .then(function (message) {
+          console.log(message);
+        });
+        });
+
+      
 
       $(window).scroll(function() {
         checkSection();
